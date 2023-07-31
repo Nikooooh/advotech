@@ -1,0 +1,22 @@
+import styled from 'styled-components';
+import Logo from '../Logo';
+import OpcoesHeader from '../OpcoesHeader';
+
+const HeaderContainer = styled.div`
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  height: 130px;
+`
+
+function Header(){
+    return(
+    <HeaderContainer>
+        <Logo/>
+        <OpcoesHeader>
+        </OpcoesHeader>
+    </HeaderContainer>
+    )
+}
+
+export default Header;
