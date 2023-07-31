@@ -8,6 +8,7 @@ const ImagemLogo = styled.img`
   widht:120px;
   height:120px;
   margin-top:5px;
+  cursor: pointer;
 `
 function Logo(){
     return(

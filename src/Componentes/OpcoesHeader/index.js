@@ -15,14 +15,19 @@ const Opcao = styled.li`
   font-size:20px;
   font-weight: bolder;
   color: #0A2A12;
+  &:hover {
+    background-color: #09bd54;
+    border-radius: 40px;
+  }
 `
 
 const TextoOpcoes = [ 'SOBRE', 'PROCESSOS', 'CONTATO']
 
+
 function OpcoesHeader() {
     return(
         <Opcoes>
-            {TextoOpcoes.map( (texto) => <Opcao>{texto}</Opcao>)}
+           {TextoOpcoes.map( (texto) => <Opcao>{texto}</Opcao>)}
         </Opcoes>
     )
 }
