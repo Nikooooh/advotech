@@ -7,6 +7,11 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
   height: 130px;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+    height: 130px;
+  }
 `
 
 function Header(){
