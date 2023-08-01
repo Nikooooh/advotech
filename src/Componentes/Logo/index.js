@@ -21,7 +21,7 @@ const ImagemLogo = styled.img`
     justify-content:center;
     display:flex;
     align-items: center;
-    margin-top:10px;
+    margin-top:20px;
   }
 `
 function Logo(){

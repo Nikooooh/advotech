@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Switch, Route, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const Opcoes = styled.ul`
   display:flex;
@@ -41,7 +41,9 @@ const TextoOpcoes = [ 'SOBRE', 'PROCESSOS', 'CONTATO']
 function OpcoesHeader() {
     return(
         <Opcoes>
-           {TextoOpcoes.map( (texto) => <Opcao>{texto}</Opcao>)}
+        {TextoOpcoes.map( (texto) => (
+          <Link to={`/${texto.toLowerCase()}`}> <Opcao>{texto}</Opcao> </Link>
+          ))} 
         </Opcoes>
     )
 }

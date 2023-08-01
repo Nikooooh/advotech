@@ -31,7 +31,7 @@ const Informacoes = styled.p`
     margin-top:15px;
     @media screen and (max-width: 768px) {
         font-size:9px;
-        margin-top:8px;
+        margin-top:12px;
       }
 `
 const InformacoesH2 = styled.h2`
@@ -56,11 +56,10 @@ const Mapa = styled.iframe`
     @media screen and (max-width: 768px) {
         width: 90%;
         height: 200px;
-        margin-left: 0;
         justify-content:center;
         align-items:center;
         display:flex;
-        margin-left:20px;
+        margin-left:16px;
         margin-top:20px;
       }
 
