@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { createGlobalStyle } from 'styled-components';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Sobre from './rotas/Sobre';
+import ContactForm from './rotas/Contato';
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -41,6 +42,7 @@ root.render(
       <Routes>
         <Route path='/sobre' element={<Sobre/>}/>
         <Route path='/' element={<Home/>} />
+        <Route path='/contato' element={<ContactForm />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

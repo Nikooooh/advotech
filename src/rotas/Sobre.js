@@ -44,7 +44,6 @@ const TextoSobre = styled.h4`
   font-family: URW Chancery L, cursive;
   padding: 15px;
   font-size: 18px;
-  letter-spacing: 0.5px;
   text-align: justify;
   @media screen and (max-width: 768px) {
   font-size: 12px;
