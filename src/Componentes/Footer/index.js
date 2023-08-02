@@ -37,10 +37,12 @@ const Informacoes = styled.p`
 const InformacoesH2 = styled.h2`
     font-size:16px;
     font-family:Arial, Helvetica, sans-serif;
+    color: #363636;
     @media screen and (max-width: 768px) {
         font-size:10px;
         margin-top:8px;
         font-family:Arial, Helvetica, sans-serif;
+        color: #363636;
       }
 `
 

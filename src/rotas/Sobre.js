@@ -6,7 +6,7 @@ const AppContainer = styled.div`
   height:100vh;
   padding:21px; 
   background: rgb(237,237,237);
-  background: linear-gradient(90deg, rgba(237,237,237,1) 0%, rgba(235,238,235,1) 100%);
+  background: linear-gradient(90deg, rgba(237,237,237,1) 0%, rgba(235,238,235,1) 100%);  
   align-items:center;
   justify-content:center;
   @media screen and (max-width: 768px) {
@@ -45,6 +45,7 @@ const TextoSobre = styled.h4`
   padding: 15px;
   font-size: 18px;
   text-align: justify;
+  color: #363636;
   @media screen and (max-width: 768px) {
   font-size: 12px;
   padding: 10px;
@@ -54,7 +55,6 @@ const Infos = styled.p`
   margin: 20px auto;
   text-align: center;
   font-size: 12px;
-  color: #363636;
   margin-top:35px;
   @media screen and (max-width: 768px) {
   font-size: 10px;

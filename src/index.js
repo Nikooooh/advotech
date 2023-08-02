@@ -7,6 +7,7 @@ import { createGlobalStyle } from 'styled-components';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Sobre from './rotas/Sobre';
 import ContactForm from './rotas/Contato';
+import Processos from './rotas/Processos';
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -42,7 +43,8 @@ root.render(
       <Routes>
         <Route path='/sobre' element={<Sobre/>}/>
         <Route path='/' element={<Home/>} />
-        <Route path='/contato' element={<ContactForm />}/>
+        <Route path='/contato' element={<ContactForm/>}/>
+        <Route path='/processos' element={<Processos/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
