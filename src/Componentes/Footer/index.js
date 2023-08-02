@@ -53,6 +53,9 @@ const Mapa = styled.iframe`
     loading="lazy" 
     referrerpolicy="no-referrer-when-downgrade";
     margin-left:512px;
+    border-radius: 50%; /* CSS3 */
+    -moz-border-radius: 10px; /* Firefox */  
+    -webkit-border-radius: 10px; /* Safari, Chrome */
     @media screen and (max-width: 768px) {
         width: 90%;
         height: 200px;
