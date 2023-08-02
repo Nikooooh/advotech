@@ -37,7 +37,7 @@ const Input = styled.input`
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
 `
 const TextArea = styled.textarea`
     margin-bottom: 10px;
