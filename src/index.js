@@ -6,8 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import { createGlobalStyle } from 'styled-components';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Sobre from './rotas/Sobre';
-import ContactForm from './rotas/Contato';
+import ContactFormulario from './rotas/Contato';
 import Processos from './rotas/Processos';
+import Obrigado from './rotas/Obrigado';
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -43,8 +44,9 @@ root.render(
       <Routes>
         <Route path='/sobre' element={<Sobre/>}/>
         <Route path='/' element={<Home/>} />
-        <Route path='/contato' element={<ContactForm/>}/>
+        <Route path='/contato' element={<ContactFormulario/>}/>
         <Route path='/processos' element={<Processos/>}/>
+        <Route path='/obrigado' element={<Obrigado/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

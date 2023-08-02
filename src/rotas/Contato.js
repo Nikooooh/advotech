@@ -1,15 +1,6 @@
-import React, { useState } from 'react';
 import styled from 'styled-components';
 import Footer from '../Componentes/Footer';
 
-const ContactForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
 
   const FormContainer = styled.div`
     max-width: 600px;
@@ -57,27 +48,30 @@ const Botao = styled.button`
 const Titulo = styled.h2`
     font-family: URW Chancery L, cursive;
 `
-  return (
+
+  function ContactFormulario() {
+    return (
     <AppContainer>
     <FormContainer>
       <Titulo>Entre em Contato</Titulo>
-      <ContactForm onSubmit={handleSubmit} className="contact-form">
+      <ContactForm action="https://formsubmit.co/c3503b52c04b0bc90b48e3321d0a9160" method="POST" >
         <Input
           type="text"
           placeholder="Nome"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          name="name"
+          required
         />
         <Input
           type="email"
           placeholder="E-mail"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          name="email"
+          required
         />
+        <input type="hidden" name="_next" value="http://localhost:3000/Obrigado"></input>
+        <input type="hidden" name="_captcha" value="false"></input>
         <TextArea
-          placeholder="Mensagem"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          name="message" placeholder="Mensagem"
+          required
         />
         <Botao type="submit">Enviar</Botao>
       </ContactForm>
@@ -87,4 +81,4 @@ const Titulo = styled.h2`
   );
 };
 
-export default ContactForm;
+export default ContactFormulario;
