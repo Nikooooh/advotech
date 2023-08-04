@@ -9,6 +9,9 @@ import Sobre from './rotas/Sobre';
 import ContactFormulario from './rotas/Contato';
 import Processos from './rotas/Processos';
 import Obrigado from './rotas/Obrigado';
+import Cadastro from './rotas/Cadastro';
+import ListaClientes from './rotas/ListaClientes';
+
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -47,6 +50,8 @@ root.render(
         <Route path='/contato' element={<ContactFormulario/>}/>
         <Route path='/processos' element={<Processos/>}/>
         <Route path='/obrigado' element={<Obrigado/>}/>
+        <Route path='/cadastro' element={<Cadastro/>}/>
+        <Route path='/clientes' element={<ListaClientes/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

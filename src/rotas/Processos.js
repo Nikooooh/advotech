@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Input from '../Componentes/Input';
+import React, { useState } from 'react';
+import api from '../Componentes/services/api';
 
 const PesquisaContainer = styled.section`
     text-align: center;
@@ -36,14 +38,40 @@ const Botao = styled.button`
         margin-left:129px;
       }
 `
-
 function Processos(){
+
+    
+        const [nomePesquisa, setNomePesquisa] = useState('');
+        const [resultados, setResultados] = useState([]);
+    
+        const handleBuscar = async () => {
+            try {
+                const response = await api.get(`/clientes/buscar/${nomePesquisa}`);
+                setResultados(response.data);
+            } catch (error) {
+                console.error('Erro ao buscar clientes:', error);
+            }
+        };
+    
     return(
         <PesquisaContainer>
             <Titulo> Consulte o andamento do seu processo</Titulo>
             <Subtitulo> De forma simples e rápida! </Subtitulo>
-            <Input placeholder="Digite o seu nome completo"/>
-            <Botao type="submit">Pesquisar</Botao>
+              <Input
+                placeholder="Digite o nome para buscar"
+                value={nomePesquisa}
+                onChange={(e) => setNomePesquisa(e.target.value)}
+              />
+            <Botao type="button" onClick={handleBuscar}>Buscar</Botao>
+            
+            
+            {resultados.map((cliente) => (
+                <div key={cliente._id}>
+                    <p>Nome: {cliente.nome}</p>
+                    <p>Situação: {cliente.situacao}</p>
+                    <p>Data da entrada no processo: {cliente.data.substr(0,10)}</p>
+                </div>
+            ))}
         </PesquisaContainer>   
     )
 }
