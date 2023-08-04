@@ -13,9 +13,22 @@ function ListaClientes() {
                 console.error('Erro ao buscar clientes:', error);
             }
         };
+        
 
         fetchClientes();
     }, []);
+
+    const handleExcluirCliente = async (clienteId) => {
+        if (window.confirm('Tem certeza que deseja excluir este cliente?')) {
+            try {
+                await api.delete(`/clientes/${clienteId}`);
+                const response = await api.get('/clientes');
+                setClientes(response.data);
+            } catch (error) {
+                console.error('Erro ao excluir cliente:', error);
+            }
+        }
+    };
 
     return (
         <div>
@@ -26,6 +39,7 @@ function ListaClientes() {
                         <p>Nome: {cliente.nome}</p>
                         <p>Situação: {cliente.situacao}</p>
                         <p>Data: {cliente.data}</p>
+                        <button onClick={() => handleExcluirCliente(cliente._id)}>Excluir</button>
                     </li>
                 ))}
             </ul>
