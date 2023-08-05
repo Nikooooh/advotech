@@ -54,5 +54,6 @@ O Advotech é licenciado sob a autoria de Nicolas Trevisan.
 •	Funcionalidade básica de consulta de processo implementada.   
 •	Resumos de processo podem ser inseridos e atualizados pelos advogados.  
 
-Este é um guia introdutório para o projeto Advotech. Caso precise de mais detalhes ou informações específicas, não hesite em me contatar.    
+Este é um guia introdutório para o projeto Advotech. Caso precise de mais detalhes ou informações específicas, não hesite em me contatar.  <br/>
+
 Todo o código está disponível no meu <strong> GitHub </strong>.
