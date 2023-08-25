@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+<h1> <strong> Documentação do Projeto Advotech  </strong> </h1>
+  
+Bem-vindo à documentação oficial do projeto Advotech. Aqui você encontrará informações detalhadas sobre o funcionamento, uso e suporte do sistema Advotech, uma plataforma projetada para simplificar a consulta de andamento de processos jurídicos.   
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2><strong> Propósito e Visão </strong></h2>
 
-## Available Scripts
+O Advotech foi desenvolvido com o propósito fundamental de tornar a consulta do andamento de processos jurídicos mais fácil e acessível. A visão é proporcionar aos clientes a capacidade de acompanhar seus processos de maneira independente, sem a necessidade de contato direto com o advogado responsável. O diferencial do Advotech está na apresentação simplificada do andamento do processo, permitindo que pessoas sem conhecimento jurídico entendam claramente a fase atual do processo.   
 
-In the project directory, you can run:
+<h2><strong> Funcionalidades Principais </strong> <br/> </h2>
 
-### `npm start`
+•	Consulta de Processos: Os clientes podem realizar consultas sobre processos jurídicos públicos através de seu próprio nome completo. O advogado responsável insere manualmente os resumos simplificados do processo.   
+•	Linguagem Jurídica Simplificada: Todos os resumos dos processos são apresentados em uma linguagem clara e de fácil compreensão, especialmente elaborada para leigos no assunto.   
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h2><strong> Tecnologias Utilizadas <br/></h2>
+O Advotech foi desenvolvido utilizando as seguintes tecnologias:  </strong> 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+•	Frontend: React JS   
+•	Backend: Node JS, Express   
+•	Banco de Dados: MongoDB   
+•	Comunicação: Axios   
+•	Deploy: Heroku <br/>
+•	Controle de Versão: GIT, GITHUB   
+•	Testes: Cypress  
 
-### `npm test`
+<h2><strong> Arquitetura <br/></h2>
+A arquitetura do Advotech é baseada em um modelo cliente-servidor, com os seguintes componentes: </strong>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+•	Cliente (Navegador do Usuário): Os usuários acessam o website através de seus navegadores.   
+•	Servidor Web (Node.js + Express): O servidor gerencia as solicitações dos clientes, processa as consultas e interage com o banco de dados.   
+•	Banco de Dados (MongoDB): As informações sobre processos e resumos são armazenadas e gerenciadas no MongoDB.   
+•	Comunicação (Axios): Facilita a comunicação entre o cliente e o servidor para buscar dados de processos.   
 
-### `npm run build`
+<h2><strong> Uso </strong> <br/></h2>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+•	www.aleciotrevisan.com.br/processos – nesse diretório, o cliente conseguirá realizar consultas do andamento do processo quando digitado o nome do cliente completo que foi previamente cadastrado no diretório /cadastro.  
+•	www.aleciotrevisan.com.br/cadastro - nesse diretório, você conseguirá cadastrar um cliente que irá persistir no banco de dados. Para consultar o cliente, basta ir ao diretório /processos e pesquisar o nome completo do cliente que você cadastrou.  
+•	www.aleciotrevisan.com.br/clientes - nesse diretório, terá a lista de todos os clientes que foram cadastrados, além disso, terá um botão com a opção de excluir o cliente desejado, o que resultará na exclusão no banco de dados também.  
+•	www.aleciotrevisan.com.br/contato - nesse diretório, o usuário conseguirá enviar uma mensagem de contato para o responsável pelo site.  
+•	www.aleciotrevisan.com.br/sobre - nesse diretório, terá um pouco sobre a trajetória do advogado em questão.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h3><strong> Nota: Os clientes devem ser cadastrados manualmente pelo advogado responsável antes de utilizar a funcionalidade de consulta.   </h3>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h3>Importante: Por se tratar de uma aplicação que tem como objetivo fazer parte de um portifólio, a aplicação não possui métodos de autenticação para que usuários possam cadastrar e excluir clientes do banco de dados. Desse modo, a intenção é implementar a autenticação via JWT na próxima versão do website. </h3>
 
-### `npm run eject`
+<h2>Suporte  </strong> <br/></h2>
+Para obter suporte, os usuários podem acessar a seção "CONTATO" no site e preencher o formulário de contato.    
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h2> <strong> Licença  </strong><br/></h2>
+O Advotech é licenciado sob a autoria de Nicolas Trevisan.   
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ <h2><strong> Notas de Versão 1.0.0  </strong> <br/></h2>
+ 
+•	Lançamento inicial do Advotech.   
+•	Funcionalidade básica de consulta de processo implementada.   
+•	Resumos de processo podem ser inseridos e atualizados pelos advogados.  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Este é um guia introdutório para o projeto Advotech. Caso precise de mais detalhes ou informações específicas, não hesite em me contatar.  <br/>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Todo o código está disponível no meu <strong> GitHub </strong>.
