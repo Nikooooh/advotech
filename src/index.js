@@ -1,32 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Header from './Componentes/Header';
-import Home from './rotas/Home';
-import reportWebVitals from './reportWebVitals';
-import { createGlobalStyle } from 'styled-components';
-import {BrowserRouter, Routes, Route} from "react-router-dom";
-import Sobre from './rotas/Sobre';
-import ContactFormulario from './rotas/Contato';
-import Processos from './rotas/Processos';
-import Obrigado from './rotas/Obrigado';
-import Cadastro from './rotas/Cadastro';
-import ListaClientes from './rotas/ListaClientes';
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Header from "./Componentes/Header";
+import Home from "./rotas/Home";
+import reportWebVitals from "./reportWebVitals";
+import { createGlobalStyle } from "styled-components";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Sobre from "./rotas/Sobre";
+import ContactFormulario from "./rotas/Contato";
+import Processos from "./rotas/Processos";
+import Obrigado from "./rotas/Obrigado";
+import Cadastro from "./rotas/Cadastro";
+import ListaClientes from "./rotas/ListaClientes";
 
 const GlobalStyle = createGlobalStyle`
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
+      font-family:Arial, Helvetica, sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
     }
 
     code {
-      font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+      font-family: font-family:Arial, Helvetica, sans-serif;
 }
     li {
       list-style: none;
@@ -36,22 +32,22 @@ const GlobalStyle = createGlobalStyle`
       text-decoration:none;
     }
 }
-`
+`;
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <GlobalStyle/>
+    <GlobalStyle />
     <BrowserRouter>
-      <Header/>
+      <Header />
       <Routes>
-        <Route path='/sobre' element={<Sobre/>}/>
-        <Route path='/' element={<Home/>} />
-        <Route path='/contato' element={<ContactFormulario/>}/>
-        <Route path='/processos' element={<Processos/>}/>
-        <Route path='/obrigado' element={<Obrigado/>}/>
-        <Route path='/cadastro' element={<Cadastro/>}/>
-        <Route path='/clientes' element={<ListaClientes/>}/>
+        <Route path="/sobre" element={<Sobre />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/contato" element={<ContactFormulario />} />
+        <Route path="/processos" element={<Processos />} />
+        <Route path="/obrigado" element={<Obrigado />} />
+        <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/clientes" element={<ListaClientes />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

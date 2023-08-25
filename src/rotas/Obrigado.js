@@ -16,6 +16,9 @@ const Container = styled.div`
 
 const Title = styled.h1`
   font-size: 24px;
+  @media screen and (max-width: 768px) {
+    font-family:Arial, Helvetica, sans-serif;
+  }
 `;
 
 const Link = styled.a`
@@ -28,7 +31,7 @@ function ThankYouPage() {
     <Container>
       <Title>Obrigado pelo seu Contato!</Title>
       <p>Estamos felizes por você ter entrado em contato conosco. Sua mensagem é muito importante para nós.</p>
-      <p><Link href="http://localhost:3000/">Clique aqui</Link> para retornar à página principal.</p>
+      <p><Link href="https://aleciotrevisan.com.br">Clique aqui</Link> para retornar à página principal.</p>
     </Container>
   );
 }

@@ -1,7 +1,7 @@
-import axios from 'axios';
+import axios from "axios";
 
 const api = axios.create({
-  baseURL: 'http://localhost:8000' 
+  baseURL: "https://advotech-3e6650f87814.herokuapp.com",
 });
 
 export default api;
